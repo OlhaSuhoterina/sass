@@ -490,7 +490,7 @@ main::-webkit-scrollbar {
   display: none !important;
 }
 
-a,
+/* a, */
 abbr,
 acronym,
 address,
@@ -903,4 +903,8 @@ input[type='number'] {
 input:-webkit-autofill {
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+a {
+  text-decoration: none;
 }

@@ -1,0 +1,252 @@
+@use '../../lib/servise.scss' as s;
+
+
+.header{
+    @extend .section;
+    background-color: s.color('backgroundDark');
+}
+
+.header_content{
+    @extend .section_content;
+    display: flex;
+    padding: s.space(4) 0;
+    justify-content: space-between;
+    
+}
+
+.header_block{
+    display: flex;
+    gap: s.space(8);
+    align-items: center
+}
+
+.header_icon{
+    @include s.click;
+}
+
+.header_link{
+    
+    @include s.click;
+    color: s.color('whiteLight');
+}
+
+.header_link{
+    font-size: s.size('small');
+}
+
+.header_ad{
+    @extend .section;
+    background-color: s.color('whiteLight');
+    display: flex;
+    
+    justify-content: center;
+}
+
+.ad_title{
+    font-size: s.size('average');
+    color: s.color('blackLight');
+}
+
+.header_ad_link{
+    
+    @include s.click;
+    color: s.color('colorBlue');
+    font-size: s.size('average');
+}
+
+.header_ad_icon{
+    @include s.click;
+
+}
+
+.product{
+    @extend .section;
+    
+    padding-top: s.space(20);
+    padding-bottom: s.space(20);
+
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.product_content{
+    display: grid;
+    gap: s.space(5);
+    text-align: center;
+    align-content: center;
+
+}
+
+.product_title{
+    font-size: 56px;
+    font-weight: 700;
+    // color: s.color('fontLight');
+}
+
+.product_descriptions{
+    font-size: 28px;
+}
+
+.product_action{
+    display: flex;
+    align-items: center;
+    gap: s.space(5);
+    justify-content: center;
+   
+    @include s.click;
+}
+
+.product_link{
+    @include s.linkAction;
+}
+
+.product_big{
+    max-height: 700px;
+    height: 100vh;
+    background-size: cover;
+   
+    
+    @media all and (width < s.screen('tablet')) {
+        background-size: 150%;
+        max-height: 500px;
+    }
+}
+
+.product_small{
+    max-height: 580px;
+    height: 100vh;
+    background-size: cover;
+    padding-top: s.space(10);
+    padding-bottom: s.space(10);
+   
+   
+    
+    @media all and (width < s.screen('tablet')) {
+        background-size: 150%;
+        max-height: 340px;
+    }
+}
+.product_small{
+    .product_title{
+        font-size: 40px;
+    }
+    .product_descriptions{
+        font-size: 20px;
+    }
+}
+
+.product_dark{
+    .product_title, .product_descriptions{
+         color: s.color('fontLight');
+    }
+    background-color: black;
+}
+
+.product_top{
+    .product_content{
+        align-content: flex-start;
+        
+    }
+}
+
+.product_light{
+    .product_title, .product_descriptions{
+        color: s.color('blackLight');
+    }
+    background-color: #fafafa;
+}
+
+
+.product_bottom{
+    .product_content{
+        align-content: flex-end;
+       
+    }
+   
+}
+
+// $productImage: (
+//     'iphone_pro' '/img/iphonePro.png',
+//     'iphohe' '/img/iphone.png'
+// );
+
+// @each $class, $url in $productImage{
+//     .product_#{$class} {
+//         background-image: url(#{$url});
+//     }
+// }
+
+.product_iphone_pro{
+    background-image: url('/img/iphonePro.png');
+}
+
+.product_iphone{
+    background-image: url('/img/iphone.png');
+}
+
+.product_iwatch{
+    background-image: url('/img/watch.png') ;
+}
+
+.product_tradeIn{
+    background-image: url('/img/tradeIn.png') ;
+}
+
+.product_conference{
+    background-image: url('/img/conference.png') ;
+}
+
+.product_ipad{
+    background-image: url('/img/ipad.png') ;
+
+}
+
+.product_small_business{
+    background-image: url('/img/smallBusiness.png') 
+}
+
+.product_gift{
+    background-image: url('/img/gift.png') ;
+}
+
+.product_card{
+     background-image: url('/img/card.png') ;
+}
+
+.footer{
+    background-color: s.color('fontLight');
+    padding-top: s.space(10);
+    padding-bottom: s.space(10);
+    display: grid;
+    justify-content: space-around;
+
+
+}
+
+.footer_content{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: flex-start;
+    width: 1200px;
+}
+
+.footer_block{
+    display: grid;
+    gap: 12px;
+    
+     
+}
+
+.footer_title{
+    font-size: s.size('small');
+    font-weight: 600;
+}
+
+.footer_link{
+    font-size: s.size('small');
+    color: s.color('colorFooter');
+}
+
